@@ -5,11 +5,11 @@ plugins {
 
 android {
     namespace = "com.nemo.smakatsu.android"
-    compileSdk = 33
+    compileSdk = libs.versions.androidCompileSdk.get().toInt()
     defaultConfig {
         applicationId = "com.nemo.smakatsu.android"
-        minSdk = 26
-        targetSdk = 33
+        minSdk = libs.versions.androidMinSdk.get().toInt()
+        targetSdk = libs.versions.androidTargetSdk.get().toInt()
         versionCode = 1
         versionName = "1.0"
     }
@@ -39,11 +39,12 @@ android {
 }
 
 dependencies {
-    implementation(project(":shared"))
-    implementation("androidx.compose.ui:ui:1.4.0")
-    implementation("androidx.compose.ui:ui-tooling:1.4.0")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.4.0")
-    implementation("androidx.compose.foundation:foundation:1.4.0")
-    implementation("androidx.compose.material:material:1.4.0")
-    implementation("androidx.activity:activity-compose:1.7.0")
+    implementation(project(":androidUi"))
+
+    implementation(libs.composeUi)
+    implementation(libs.composeUiTooling)
+    implementation(libs.composeUiToolingPreview)
+    implementation(libs.composeFoundation)
+    implementation(libs.composeMaterial)
+    implementation(libs.activityCompose)
 }

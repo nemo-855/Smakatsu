@@ -18,12 +18,22 @@ kotlin {
         iosSimulatorArm64()
     ).forEach {
         it.binaries.framework {
-            baseName = "shared"
+            baseName = "sharedData"
         }
     }
 
     sourceSets {
-        val commonMain by getting
+        val commonMain by getting {
+            dependencies {
+                implementation(libs.koinCore)
+                implementation(libs.koinTest)
+                implementation(libs.ktorCore)
+                implementation(libs.ktorContentNegotiation)
+                implementation(libs.ktorSerialization)
+                implementation(libs.kotlinCoroutine)
+                implementation(libs.kotlinSerialization)
+            }
+        }
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test"))
@@ -39,6 +49,10 @@ kotlin {
             iosX64Main.dependsOn(this)
             iosArm64Main.dependsOn(this)
             iosSimulatorArm64Main.dependsOn(this)
+
+            dependencies {
+                implementation(libs.ktorDarwin)
+            }
         }
         val iosX64Test by getting
         val iosArm64Test by getting
@@ -53,7 +67,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.nemo.smakatsu"
+    namespace = "com.nemo.shareddata"
     compileSdk = 33
     defaultConfig {
         minSdk = 26
