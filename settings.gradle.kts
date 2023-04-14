@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 rootProject.name = "smakatsu"
 include(":androidApp")
 include(":shared")
+include(":sharedData")
