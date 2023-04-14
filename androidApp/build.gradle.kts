@@ -39,7 +39,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":shared"))
+    implementation(project(":sharedDomain"))
     implementation(libs.composeUi)
     implementation(libs.composeUiTooling)
     implementation(libs.composeUiToolingPreview)
