@@ -5,6 +5,9 @@ koin = "3.2.0"
 ktor = "2.2.4"
 kotlinCoroutine = "1.6.4"
 kotlinSerialization = "1.5.0"
+androidMinSdk = "26"
+androidCompileSdk = "33"
+androidTargetSdk = "33"
 
 [libraries]
 composeUi = { module = "androidx.compose.ui:ui", version.ref = "compose" }
