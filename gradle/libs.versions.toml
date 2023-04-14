@@ -1,0 +1,28 @@
+[versions]
+compose = "1.4.0"
+activityCompose = "1.7.0"
+koin = "3.2.0"
+ktor = "2.2.4"
+kotlinCoroutine = "1.6.4"
+kotlinSerialization = "1.5.0"
+
+[libraries]
+composeUi = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+composeUiTooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+composeUiToolingPreview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+composeFoundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
+composeMaterial = { module = "androidx.compose.material:material", version.ref = "compose" }
+
+activityCompose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose"}
+
+koinCore = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koinTest = { module = "io.insert-koin:koin-test", version.ref = "koin" }
+
+ktorCore = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktorOkhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
+ktorDarwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
+ktorContentNegotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktorSerialization = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+
+kotlinCoroutine = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinCoroutine" }
+kotlinSerialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinSerialization" }
