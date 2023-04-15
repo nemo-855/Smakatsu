@@ -33,12 +33,20 @@ android {
     kotlinOptions {
         jvmTarget = "18"
     }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.4.5"
+    }
 }
 
 dependencies {
     implementation(project(":sharedDomain"))
 
+    implementation(platform(libs.composeBom))
     implementation(libs.composeUi)
+    implementation(libs.composeRuntime)
     implementation(libs.composeNavigation)
     implementation(libs.composeUiTooling)
     implementation(libs.composeUiToolingPreview)

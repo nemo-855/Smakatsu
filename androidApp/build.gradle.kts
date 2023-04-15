@@ -19,7 +19,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.4"
+        kotlinCompilerExtensionVersion = "1.4.5"
     }
     packagingOptions {
         resources {
@@ -45,4 +45,9 @@ dependencies {
 
     implementation(libs.daggerHilt)
     kapt(libs.daggerHiltCompiler)
+
+    implementation(platform(libs.composeBom))
+    implementation(libs.composeRuntime)
+
+    implementation(libs.activityCompose)
 }
