@@ -12,6 +12,7 @@ androidMinSdk = "26"
 androidCompileSdk = "33"
 androidTargetSdk = "33"
 androidApplication = "7.4.2"
+daggerHilt = "2.44"
 
 [libraries]
 appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
@@ -37,3 +38,5 @@ ktorSerialization = { module = "io.ktor:ktor-serialization-kotlinx-json", versio
 kotlinCoroutine = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinCoroutine" }
 kotlinSerialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinSerialization" }
 
+daggerHilt = { module = "com.google.dagger:hilt-android", version.ref = "daggerHilt" }
+daggerHiltCompiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "daggerHilt" }

@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     kotlin("android")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -40,4 +42,7 @@ android {
 
 dependencies {
     implementation(project(":androidUi"))
+
+    implementation(libs.daggerHilt)
+    kapt(libs.daggerHiltCompiler)
 }

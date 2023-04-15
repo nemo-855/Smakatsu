@@ -1,6 +1,8 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -43,4 +45,7 @@ dependencies {
     implementation(libs.composeFoundation)
     implementation(libs.composeMaterial3)
     implementation(libs.activityCompose)
+
+    implementation(libs.daggerHilt)
+    kapt(libs.daggerHiltCompiler)
 }
