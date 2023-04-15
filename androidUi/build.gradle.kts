@@ -37,6 +37,7 @@ dependencies {
     implementation(project(":sharedDomain"))
 
     implementation(libs.composeUi)
+    implementation(libs.composeNavigation)
     implementation(libs.composeUiTooling)
     implementation(libs.composeUiToolingPreview)
     implementation(libs.composeFoundation)
