@@ -25,7 +25,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-
+                implementation(project(":sharedData"))
             }
         }
         val commonTest by getting {

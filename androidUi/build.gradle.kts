@@ -35,4 +35,11 @@ android {
 
 dependencies {
     implementation(project(":sharedDomain"))
+
+    implementation(libs.composeUi)
+    implementation(libs.composeUiTooling)
+    implementation(libs.composeUiToolingPreview)
+    implementation(libs.composeFoundation)
+    implementation(libs.composeMaterial3)
+    implementation(libs.activityCompose)
 }

@@ -40,11 +40,4 @@ android {
 
 dependencies {
     implementation(project(":androidUi"))
-
-    implementation(libs.composeUi)
-    implementation(libs.composeUiTooling)
-    implementation(libs.composeUiToolingPreview)
-    implementation(libs.composeFoundation)
-    implementation(libs.composeMaterial)
-    implementation(libs.activityCompose)
 }
