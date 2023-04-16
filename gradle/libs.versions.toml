@@ -15,6 +15,7 @@ androidApplication = "7.4.2"
 daggerHilt = "2.44"
 flipper = "0.189.0"
 soloader = "0.10.5"
+sqldelight = "1.5.5"
 
 [libraries]
 appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
@@ -52,3 +53,6 @@ flipperNoop = { module = "com.facebook.flipper:flipper-noop", version.ref = "fli
 flipperNetwork = { module = "com.facebook.flipper:flipper-network-plugin", version.ref = "flipper" }
 soloader = { module = "com.facebook.soloader:soloader", version.ref = "soloader" }
 
+sqldelightNative = { module = "com.squareup.sqldelight:native-driver", version.ref = "sqldelight" }
+sqldelightAndroid = { module = "com.squareup.sqldelight:android-driver", version.ref = "sqldelight" }
+sqldelightRuntime = { module = "com.squareup.sqldelight:runtime", version.ref = "sqldelight" }
