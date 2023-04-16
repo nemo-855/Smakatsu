@@ -45,6 +45,7 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 implementation(libs.sqldelightAndroid)
+                implementation(libs.koinAndroid)
             }
         }
         val androidUnitTest by getting
