@@ -32,6 +32,7 @@ kotlin {
                 implementation(libs.ktorSerialization)
                 implementation(libs.kotlinCoroutine)
                 implementation(libs.kotlinSerialization)
+                implementation(libs.kotlinDatetime)
             }
         }
         val commonTest by getting {
