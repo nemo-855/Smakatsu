@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.nemo.androidui"
-    compileSdk = libs.versions.androidCompileSdk.get().toInt()
+    compileSdkVersion(libs.versions.androidCompileSdk.get().toInt())
 
     defaultConfig {
         minSdk = libs.versions.androidMinSdk.get().toInt()
@@ -42,7 +42,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":sharedDomain"))
+    implementation(project(":shared"))
 
     implementation(platform(libs.composeBom))
     implementation(libs.composeUi)
