@@ -13,6 +13,8 @@ androidCompileSdk = "33"
 androidTargetSdk = "33"
 androidApplication = "7.4.2"
 daggerHilt = "2.44"
+flipper = "0.189.0"
+soloader = "0.10.5"
 
 [libraries]
 appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
@@ -44,4 +46,9 @@ kotlinSerialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-js
 
 daggerHilt = { module = "com.google.dagger:hilt-android", version.ref = "daggerHilt" }
 daggerHiltCompiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "daggerHilt" }
+
+flipper = { module = "com.facebook.flipper:flipper", version.ref = "flipper" }
+flipperNoop = { module = "com.facebook.flipper:flipper-noop", version.ref = "flipper" }
+flipperNetwork = { module = "com.facebook.flipper:flipper-network-plugin", version.ref = "flipper" }
+soloader = { module = "com.facebook.soloader:soloader", version.ref = "soloader" }
 

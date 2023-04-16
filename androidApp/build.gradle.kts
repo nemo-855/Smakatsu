@@ -50,4 +50,9 @@ dependencies {
     implementation(libs.composeRuntime)
 
     implementation(libs.activityCompose)
+
+    debugImplementation(libs.flipper)
+    debugImplementation(libs.soloader)
+    debugImplementation(libs.flipperNetwork)
+    releaseImplementation(libs.flipperNoop)
 }
