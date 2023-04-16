@@ -43,6 +43,7 @@ android {
 
 dependencies {
     implementation(project(":shared"))
+    implementation(project(":sharedExt"))
 
     implementation(platform(libs.composeBom))
     implementation(libs.composeUi)
