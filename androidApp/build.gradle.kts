@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     kotlin("android")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -17,7 +19,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.4"
+        kotlinCompilerExtensionVersion = "1.4.5"
     }
     packagingOptions {
         resources {
@@ -41,10 +43,11 @@ android {
 dependencies {
     implementation(project(":androidUi"))
 
-    implementation(libs.composeUi)
-    implementation(libs.composeUiTooling)
-    implementation(libs.composeUiToolingPreview)
-    implementation(libs.composeFoundation)
-    implementation(libs.composeMaterial)
+    implementation(libs.daggerHilt)
+    kapt(libs.daggerHiltCompiler)
+
+    implementation(platform(libs.composeBom))
+    implementation(libs.composeRuntime)
+
     implementation(libs.activityCompose)
 }
