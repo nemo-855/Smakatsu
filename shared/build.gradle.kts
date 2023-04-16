@@ -1,6 +1,7 @@
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
+    id("com.squareup.sqldelight")
 }
 
 kotlin {
@@ -18,7 +19,7 @@ kotlin {
         iosSimulatorArm64()
     ).forEach {
         it.binaries.framework {
-            baseName = "shared"
+            baseName = "sharedData"
         }
     }
 
@@ -26,6 +27,14 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation(libs.kotlinDatetime)
+                implementation(libs.koinCore)
+                implementation(libs.koinTest)
+                implementation(libs.ktorCore)
+                implementation(libs.ktorContentNegotiation)
+                implementation(libs.ktorSerialization)
+                implementation(libs.kotlinCoroutine)
+                implementation(libs.kotlinSerialization)
+                implementation(libs.sqldelightRuntime)
             }
         }
         val commonTest by getting {
@@ -33,7 +42,12 @@ kotlin {
                 implementation(kotlin("test"))
             }
         }
-        val androidMain by getting
+        val androidMain by getting {
+            dependencies {
+                implementation(libs.sqldelightAndroid)
+                implementation(libs.koinAndroid)
+            }
+        }
         val androidUnitTest by getting
         val iosX64Main by getting
         val iosArm64Main by getting
@@ -43,6 +57,11 @@ kotlin {
             iosX64Main.dependsOn(this)
             iosArm64Main.dependsOn(this)
             iosSimulatorArm64Main.dependsOn(this)
+
+            dependencies {
+                implementation(libs.ktorDarwin)
+                implementation(libs.sqldelightNative)
+            }
         }
         val iosX64Test by getting
         val iosArm64Test by getting
@@ -57,9 +76,16 @@ kotlin {
 }
 
 android {
-    namespace = "com.nemo.smakatsu"
-    compileSdk = 33
+    namespace = "com.nemo.shareddata"
+    compileSdkVersion(libs.versions.androidCompileSdk.get().toInt())
     defaultConfig {
         minSdk = 26
+    }
+}
+
+sqldelight {
+    database("SmakatsuDB") {
+        packageName = "com.nemo.shareddata.db"
+        sourceFolders = listOf("sqldelight")
     }
 }

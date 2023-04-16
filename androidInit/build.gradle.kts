@@ -1,13 +1,11 @@
 plugins {
-    id("com.android.library")
     id("org.jetbrains.kotlin.android")
-    kotlin("kapt")
-    id("com.google.dagger.hilt.android")
+    id("com.android.library")
 }
 
 android {
-    namespace = "com.nemo.androidui"
-    compileSdkVersion(libs.versions.androidCompileSdk.get().toInt())
+    namespace = "com.nemo.androiddi"
+    compileSdk = libs.versions.androidCompileSdk.get().toInt()
 
     defaultConfig {
         minSdk = libs.versions.androidMinSdk.get().toInt()
@@ -33,27 +31,11 @@ android {
     kotlinOptions {
         jvmTarget = "18"
     }
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.5"
-    }
 }
 
 dependencies {
     implementation(project(":shared"))
 
-    implementation(platform(libs.composeBom))
-    implementation(libs.composeUi)
-    implementation(libs.composeRuntime)
-    implementation(libs.composeNavigation)
-    implementation(libs.composeUiTooling)
-    implementation(libs.composeUiToolingPreview)
-    implementation(libs.composeFoundation)
-    implementation(libs.composeMaterial3)
-    implementation(libs.activityCompose)
-
-    implementation(libs.daggerHilt)
-    kapt(libs.daggerHiltCompiler)
+    implementation(libs.koinCore)
+    implementation(libs.koinTest)
 }

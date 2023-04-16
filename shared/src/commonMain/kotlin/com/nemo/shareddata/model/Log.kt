@@ -1,4 +1,4 @@
-package com.nemo.shareddomain.model
+package com.nemo.shareddata.model
 
 import kotlinx.datetime.LocalDateTime
 
