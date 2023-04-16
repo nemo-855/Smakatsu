@@ -17,3 +17,4 @@ rootProject.name = "smakatsu"
 include(":shared")
 include(":androidApp")
 include(":androidUi")
+include(":androidInit")
