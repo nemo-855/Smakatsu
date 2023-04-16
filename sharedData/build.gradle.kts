@@ -25,6 +25,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
+                implementation(project(":sharedDomain"))
                 implementation(libs.koinCore)
                 implementation(libs.koinTest)
                 implementation(libs.ktorCore)
@@ -32,7 +33,6 @@ kotlin {
                 implementation(libs.ktorSerialization)
                 implementation(libs.kotlinCoroutine)
                 implementation(libs.kotlinSerialization)
-                implementation(libs.kotlinDatetime)
             }
         }
         val commonTest by getting {
