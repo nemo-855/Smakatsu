@@ -43,5 +43,21 @@ private fun PieChart(uiModel: TopUiModel.PieChartUiModel) {
             useCenter = false,
             style = Stroke(width = 4.dp.toPx())
         )
+@Composable
+private fun Cursor() {
+    val triangle = GenericShape {size, _ ->
+        lineTo((size.width / 2), 0f)
+        lineTo(size.width, size.height * 2 / 3)
+        lineTo(size.width * 3 / 4, size.height)
+        lineTo(size.width / 2, size.height * 2 / 3)
+        lineTo(size.width * 1 / 4, size.height)
+        lineTo(0f, size.height * 2 / 3)
+        lineTo((size.width / 2), 0f)
     }
+    Box(
+        modifier = Modifier
+            .size(20.dp)
+            .clip(triangle)
+            .background(Color.Black)
+    )
 }
