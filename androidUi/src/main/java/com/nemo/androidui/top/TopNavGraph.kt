@@ -5,7 +5,7 @@ import androidx.navigation.compose.composable
 
 internal fun NavGraphBuilder.topNavGraph() {
     composable(route = TopNavGraph.topRoute) {
-
+        TopScreen()
     }
 }
 
