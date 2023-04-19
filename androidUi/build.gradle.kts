@@ -43,6 +43,7 @@ android {
 
 dependencies {
     implementation(project(":shared"))
+    implementation(project(":sharedExt"))
 
     implementation(platform(libs.composeBom))
     implementation(libs.composeUi)
@@ -53,6 +54,8 @@ dependencies {
     implementation(libs.composeFoundation)
     implementation(libs.composeMaterial3)
     implementation(libs.activityCompose)
+
+    implementation(libs.kotlinDatetime)
 
     implementation(libs.daggerHilt)
     kapt(libs.daggerHiltCompiler)
