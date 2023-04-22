@@ -15,8 +15,8 @@ import androidx.compose.ui.graphics.drawscope.rotate
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.nemo.shareddata.model.Plan
-import com.nemo.shareddata.model.PlanType
+import com.nemo.shared.domain.model.Plan
+import com.nemo.shared.domain.model.PlanType
 import com.nemo.sharedext.percentageToADay
 import kotlinx.datetime.LocalDateTime
 import kotlin.math.cos

@@ -91,7 +91,7 @@ android {
 
 sqldelight {
     database("SmakatsuDB") {
-        packageName = "com.nemo.shareddata.db"
+        packageName = "com.nemo.shared.data.db"
         sourceFolders = listOf("sqldelight")
     }
 }

@@ -1,4 +1,4 @@
-package com.nemo.shareddata.db
+package com.nemo.shared.data.db
 
 import android.content.Context
 import com.squareup.sqldelight.android.AndroidSqliteDriver
