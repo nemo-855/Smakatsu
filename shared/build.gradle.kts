@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.plugin.mpp.apple.XCFramework
+
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
@@ -12,14 +14,17 @@ kotlin {
             }
         }
     }
-    
+
+    val moduleName = "shared"
+    val xcf = XCFramework(moduleName)
     listOf(
         iosX64(),
         iosArm64(),
         iosSimulatorArm64()
     ).forEach {
         it.binaries.framework {
-            baseName = "sharedData"
+            baseName = moduleName
+            xcf.add(this)
         }
     }
 
