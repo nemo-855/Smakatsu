@@ -1,6 +1,8 @@
 plugins {
     id("org.jetbrains.kotlin.android")
     id("com.android.library")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -38,4 +40,6 @@ dependencies {
 
     implementation(libs.koinCore)
     implementation(libs.koinTest)
+    implementation(libs.daggerHilt)
+    kapt(libs.daggerHiltCompiler)
 }
