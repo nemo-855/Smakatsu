@@ -14,6 +14,6 @@ open class SmakatsuApp : Application() {
 
     private fun initSharedModule() {
         val sharedInitializer: SharedInitializer = SharedInitializerImpl()
-        sharedInitializer.init()
+        sharedInitializer.init(context = this)
     }
 }

@@ -1,9 +1,10 @@
 package com.nemo.androiddi.sharedModule
 
-import com.nemo.shareddata.di.initSharedModuleDi
+import android.content.Context
+import com.nemo.shared.di.SharedModuleInitializer
 
 class SharedInitializerImpl : SharedInitializer {
-    override fun init() {
-        initSharedModuleDi()
+    override fun init(context: Context) {
+        SharedModuleInitializer(context).initSharedModuleDi()
     }
 }
