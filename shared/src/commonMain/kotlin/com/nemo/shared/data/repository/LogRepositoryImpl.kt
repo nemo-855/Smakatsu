@@ -16,11 +16,11 @@ class LogRepositoryImpl(
         try {
             dailyLogDao.insert(date = log.startTime.date)
         } catch (e: Throwable) {
-            if (e.toAppError() is AppError.DbError.UniqueConstraintException) {
-                logDao.insert(log = log)
-            } else {
+            if (e.toAppError() !is AppError.DbError.UniqueConstraintException) {
                 throw e
             }
+        } finally {
+            logDao.insert(log = log)
         }
     }
 }
